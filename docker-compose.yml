@@ -1,0 +1,11 @@
+version: '3'
+services:
+  nextjs:
+    build: .
+    ports:
+      - "3000:3000"  # Map the container's 3000 port to the host's 3000
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/app  # Bind mount the local code to the container (optional for development)
+    restart: unless-stopped
