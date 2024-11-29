@@ -84,14 +84,14 @@ export default function Home() {
               <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
                   <h2
                       data-aos="fade-up"
-                      className="mb-4 text-3xl tracking-tight text-blue-800 font-medium dark:text-white">
+                      className="mb-4 text-3xl text-black-800 tracking-tight font-medium ">
                       Our LMS Members
                   </h2>
               </div>
               <div className="flex justify-center mx-auto mb-16">
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                       {teamMembers.slice(0, 3).map((member, index) => (
-                          <div key={index} className="text-center text-gray-500 dark:text-gray-400">
+                          <div key={index} className="text-center text-black-800 ">
                               <Image
                                   alt={`${member.name} Avatar`}
                                   loading="lazy"
@@ -99,12 +99,12 @@ export default function Home() {
                                   height={144}
                                   data-aos="flip-right"
                                   decoding="async"
-                                  className="mx-auto mb-4 w-24 h-24 lg:w-36 lg:h-36 rounded-full md:w-28 md:h-28"
+                                  className="mx-auto mb-4 w-24 h-24 lg:w-36 lg:h-36 rounded-full md:w-28 md:h-28 border-4 border-sky-500"
                                   src={member.image}
                               />
                               <h3
                                   data-aos="fade-up-right"
-                                  className="mb-1 lg:text-2xl md:text-lg text-base text-black font-light tracking-tight dark:text-white">
+                                  className="mb-1 lg:text-2xl md:text-lg text-base text-black font-light tracking-tight ">
                                   {member.name}
                               </h3>
                               <small><p data-aos="fade-up">LMS TEAM</p></small>
@@ -144,7 +144,7 @@ export default function Home() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                   {teamMembers.slice(3).map((member, index) => (
-                      <div key={index + 3} className="text-center text-gray-500 dark:text-gray-400">
+                      <div key={index + 3} className="text-center text-black-800">
                           <Image
                               alt={`${member.name} Avatar`}
                               loading="lazy"
@@ -152,12 +152,12 @@ export default function Home() {
                               height={144}
                               data-aos="flip-right"
                               decoding="async"
-                              className="mx-auto mb-4 w-24 h-24 lg:w-36 lg:h-36 rounded-full md:w-28 md:h-28"
+                              className="mx-auto mb-4 w-24 h-24 lg:w-36 lg:h-36 rounded-full md:w-28 md:h-28 border-4 border-sky-500"
                               src={member.image}
                           />
                           <h3
                               data-aos="fade-up-right"
-                              className="mb-1 lg:text-2xl md:text-lg text-base text-black font-light tracking-tight dark:text-white">
+                              className="mb-1 lg:text-2xl md:text-lg text-base text-black font-light tracking-tight ">
                               {member.name}
                           </h3>
                           <small><p data-aos="fade-up">LMS TEAM</p></small>
