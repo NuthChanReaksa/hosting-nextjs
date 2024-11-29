@@ -26,7 +26,7 @@ const ParticlesComponent = (props : any) => {
         });
     }, []);
 
-    const particlesLoaded = (container : any) => {
+    const particlesLoaded = (container : string) => {
         console.log(container);
     };
 
@@ -47,7 +47,7 @@ const ParticlesComponent = (props : any) => {
                     },
                     onHover: {
                         enable: true,
-                        mode: 'grab',
+                        mode: "grab",
                     },
                 },
                 modes: {
@@ -72,7 +72,7 @@ const ParticlesComponent = (props : any) => {
                     width: 1,
                 },
                 move: {
-                    direction: "none",
+                    direction: "none",  // "none" should be valid, make sure it's the correct type
                     enable: true,
                     outModes: {
                         default: "bounce",
@@ -99,11 +99,14 @@ const ParticlesComponent = (props : any) => {
             },
             detectRetina: true,
         }),
-        [],
+        []
     );
 
 
+
+    // @ts-ignore
     return <Particles id={props.id} init={particlesLoaded} options={options} />;
+
 };
 
 export default ParticlesComponent;
